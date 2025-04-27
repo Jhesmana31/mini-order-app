@@ -3,56 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Place Your Order</title>
+  <title>Open Our Shop</title>
 </head>
 <body>
-  <h1>Place Your Order</h1>
+  <h1>Welcome to Our Shop</h1>
+  <p>Click the button below to visit our store:</p>
 
-  <form id="orderForm">
-    <label for="product">Product Name:</label><br>
-    <input type="text" id="product" name="product" required><br><br>
-
-    <label for="quantity">Quantity:</label><br>
-    <input type="number" id="quantity" name="quantity" min="1" value="1" required><br><br>
-
-    <label for="name">Your Name:</label><br>
-    <input type="text" id="name" name="name" required><br><br>
-
-    <label for="address">Delivery Address:</label><br>
-    <textarea id="address" name="address" required></textarea><br><br>
-
-    <button type="submit">Submit Order</button>
-  </form>
-
-  <div id="thankYouMessage" style="display:none;">
-    <h2>Thank you for your order!</h2>
-    <p>We received your order and will contact you soon.</p>
-  </div>
-
-  <script>
-    const form = document.getElementById('orderForm');
-    const thankYouMessage = document.getElementById('thankYouMessage');
-
-    form.addEventListener('submit', function(event) {
-      event.preventDefault();
-
-      const orderData = {
-        product: form.product.value,
-        quantity: form.quantity.value,
-        customerName: form.name.value,
-        address: form.address.value,
-        orderedAt: new Date().toLocaleString()
-      };
-
-      if (window.Telegram.WebApp) {
-        window.Telegram.WebApp.sendData(JSON.stringify(orderData));
-        // Hide form and show thank you message
-        form.style.display = 'none';
-        thankYouMessage.style.display = 'block';
-      } else {
-        alert('Telegram WebApp not available.');
-      }
-    });
-  </script>
+  <button onclick="window.open('https://sentro.ph/order/kutabarestore', '_blank')">Go to Shop</button>
 </body>
 </html>
