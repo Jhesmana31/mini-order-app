@@ -3,12 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Open Our Shop</title>
+  <title>Opening Shop...</title>
+  <style>
+    body {
+      background-color: black; /* Black background */
+      color: #00ffcc; /* Neon teal text */
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+    h1 {
+      color: #ff00ff; /* Neon pink for the header */
+    }
+    a {
+      color: #00ffcc; /* Neon teal for the link */
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline; /* Underline link when hovered */
+      color: #ff00ff; /* Change link color to neon pink on hover */
+    }
+  </style>
+  <script>
+    // Automatically open the website as soon as the mini app is loaded
+    window.onload = function() {
+      window.location.href = 'https://sentro.ph/shop/kutabarestore';
+    };
+  </script>
 </head>
 <body>
-  <h1>Welcome to Our Shop</h1>
-  <p>Click the button below to visit our store:</p>
-
-  <button onclick="window.open('https://sentro.ph/order/kutabarestore', '_blank')">Go to Shop</button>
+  <h1>Opening Our Shop...</h1>
+  <p>If the shop doesn't open automatically, <a href="https://sentro.ph/shop/kutabarestore">click here</a>.</p>
 </body>
 </html>
